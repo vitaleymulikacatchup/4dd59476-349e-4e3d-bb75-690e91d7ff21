@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0f1419;
+    color: #f8fafc;
+  }
+}
+
+@layer components {
+  .market-card {
+    @apply bg-card-bg border border-card-border rounded-lg p-4 hover:border-polymarket-blue/50 transition-colors;
+  }
+  
+  .percentage-badge {
+    @apply px-2 py-1 rounded text-sm font-medium;
+  }
+  
+  .percentage-green {
+    @apply bg-polymarket-green/20 text-polymarket-green;
+  }
+  
+  .percentage-red {
+    @apply bg-polymarket-red/20 text-polymarket-red;
+  }
+  
+  .nav-item {
+    @apply px-3 py-2 text-text-secondary hover:text-text-primary transition-colors cursor-pointer;
+  }
+  
+  .nav-item.active {
+    @apply text-text-primary;
+  }
+  
+  .trending-badge {
+    @apply bg-polymarket-red text-white px-2 py-1 rounded text-xs font-medium;
+  }
+  
+  .live-badge {
+    @apply bg-red-500 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
